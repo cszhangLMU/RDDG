@@ -86,8 +86,8 @@ SYN_DATA_SAVE_DIR = params['SAVE_DIR']
 os.makedirs(SYN_DATA_SAVE_DIR, exist_ok=True)
 
 # Read real data
-X_train = pd.read_csv(os.path.join(REAL_DATA_SAVE_DIR, f'X_train_1.csv'), index_col=None)
-y_train = pd.read_csv(os.path.join(REAL_DATA_SAVE_DIR, f'y_train_1.csv'), index_col=None)
+X_train = pd.read_csv(os.path.join(REAL_DATA_SAVE_DIR, f'X_train.csv'), index_col="index")
+y_train = pd.read_csv(os.path.join(REAL_DATA_SAVE_DIR, f'y_train.csv'), index_col="index")
 data = pd.concat((y_train, X_train), axis=1)
 data_copy = data.copy()
 
