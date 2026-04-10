@@ -38,11 +38,11 @@ params = {
     "DATA_NAME": "Thyroid",
     "TARGET": "Recurred",
     "N_CLASS": 2,
-    "N_SAMPLES_PER_CLASS": 15,
+    "N_SAMPLES_PER_CLASS": 10,
     "N_SET": 4,
     "USE_RANDOM_WORD": True,
     "N_CORESETS_BATCH": 1,
-    "N_BATCH": 20,
+    "N_BATCH": 10,
     "MODEL_NAME": "Thyroid_STPrompt",
     "N_TARGET_SAMPLES": 1000,
 }
@@ -414,5 +414,5 @@ if params['USE_RANDOM_WORD']:
 
 # Save synthetic tabular data
 file_name = os.path.join(SYN_DATA_SAVE_DIR, f'{DATA_NAME}_samples_True.csv')
-synthetic_df_all_r.to_csv(file_name, index=False)
+synthetic_df_all_r.to_csv(file_name, index="synindex")
 print('Saved:', file_name)

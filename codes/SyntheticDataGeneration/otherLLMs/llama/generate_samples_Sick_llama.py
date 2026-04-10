@@ -28,7 +28,7 @@ os.environ["http_proxy"] = "http://localhost:7890"
 os.environ["https_proxy"] = "http://localhost:7890"
 
 # OpenRouter API configuration
-api_key = "YOUR-API-KEY"  # Replace with your OpenRouter API key
+api_key = "Your-API-KEY"  # Replace with your OpenRouter API key
 base_url = "https://openrouter.ai/api/v1"
 
 params = {
@@ -38,12 +38,12 @@ params = {
     "DATA_NAME": "Sick",
     "TARGET": "Class",
     "N_CLASS": 2,
-    "N_SAMPLES_PER_CLASS": 15,
+    "N_SAMPLES_PER_CLASS": 10,
     "N_SET": 4,
     "USE_RANDOM_WORD": True,
     "N_CORESETS_BATCH": 1,
-    "N_BATCH": 20,
-    "MODEL_NAME": "Sick_STPrompt_LLama",
+    "N_BATCH": 10,
+    "MODEL_NAME": "Sick_STPrompt",
     "N_TARGET_SAMPLES": 1000,
 }
 
@@ -413,5 +413,5 @@ if params['USE_RANDOM_WORD']:
 
 # Save synthetic tabular data
 file_name = os.path.join(SYN_DATA_SAVE_DIR, f'{DATA_NAME}_samples_True.csv')
-synthetic_df_all_r.to_csv(file_name, index=False)
+synthetic_df_all_r.to_csv(file_name, index="synindex")
 print('Saved:', file_name)

@@ -34,17 +34,17 @@ base_url = "https://openrouter.ai/api/v1"
 params = {
     "openai_key": api_key,  # Use OpenRouter API key
     "base_url": base_url,
-    "model": "mistralai/ministral-8b",  # Specify LLaMA model from OpenRouter
+    "model": "mistralai/ministral-8b-2512",  # Specify LLaMA model from OpenRouter
     "DATA_NAME": "Sick",
     "TARGET": "Class",
     "N_CLASS": 2,
-    "N_SAMPLES_PER_CLASS": 15,
+    "N_SAMPLES_PER_CLASS": 10,
     "N_SET": 4,
     "USE_RANDOM_WORD": True,
     "N_CORESETS_BATCH": 1,
-    "N_BATCH": 20,
-    "MODEL_NAME": "Sick_STPrompt_New2",
-    "N_TARGET_SAMPLES": 200,
+    "N_BATCH": 10,
+    "MODEL_NAME": "Sick_STPrompt",
+    "N_TARGET_SAMPLES": 1000,
 }
 
 # Configure parameters
@@ -413,5 +413,5 @@ if params['USE_RANDOM_WORD']:
 
 # Save synthetic tabular data
 file_name = os.path.join(SYN_DATA_SAVE_DIR, f'{DATA_NAME}_samples_True.csv')
-synthetic_df_all_r.to_csv(file_name, index=False)
+synthetic_df_all_r.to_csv(file_name, index="synindex")
 print('Saved:', file_name)
