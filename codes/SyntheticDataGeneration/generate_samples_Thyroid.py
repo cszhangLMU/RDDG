@@ -20,10 +20,6 @@ from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain.prompts import PromptTemplate
 
-import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent.parent))
-
 from util import get_prompt_conclass, parse_prompt2df, parse_result, get_unique_features, \
     make_final_prompt, \
     weight_init, compute_eva_score, generate_prompt
@@ -67,8 +63,8 @@ config = {
     "seed": 0  # 设置随机种子
 }
 params.update({
-    "DATA_DIR": f"../../../../data/realdata/{params['DATA_NAME']}",
-    "SAVE_DIR": f"../../../../data/syndata/{params['MODEL_NAME']}"
+    "DATA_DIR": f"../../data/realdata/{params['DATA_NAME']}",
+    "SAVE_DIR": f"../../data/syndata/{params['MODEL_NAME']}"
 })
 # init API
 load_dotenv()
@@ -141,7 +137,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001, betas=(0.5, 0.9))
 data_name = "Thyroid"
 device = config["device"]
 
-dataset_variance_total = '../../dataset_variance_total/' + str(data_name) + '_variance_total.npy'
+dataset_variance_total = './dataset_variance_total/' + str(data_name) + '_variance_total.npy'
 if not os.path.exists(dataset_variance_total):
     variance_total = compute_eva_score(train_loader, model, config["eva_epochs"], config["early_window"],
                                        config["late_window"], optimizer, criterion, device=device)
@@ -149,7 +145,7 @@ if not os.path.exists(dataset_variance_total):
 
 variance_total = np.load(dataset_variance_total)
 
-coreset_path = os.path.join('../../coreset', f'{data_name}_selection.csv')
+coreset_path = os.path.join('./coreset', f'{data_name}_selection.csv')
 
 if not os.path.exists(coreset_path):
 
