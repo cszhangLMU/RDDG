@@ -49,7 +49,12 @@ pip install -r requirements.txt
 
    ```bash
    cd ../DownstreamTasks
+
+   # evaluate on Sick Dataset
    python Classification.py  
+
+   # evaluate on Thyroid Dataset
+   python Classification_Thyroid.py
    ```
 4. **Change Model to generate Synthetic Datasets**
 
