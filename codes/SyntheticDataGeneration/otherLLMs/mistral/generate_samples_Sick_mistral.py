@@ -413,5 +413,5 @@ if params['USE_RANDOM_WORD']:
 
 # Save synthetic tabular data
 file_name = os.path.join(SYN_DATA_SAVE_DIR, f'{DATA_NAME}_samples_True.csv')
-synthetic_df_all_r.to_csv(file_name, index="synindex")
+synthetic_df_all_r.to_csv(file_name, index_label='synindex')
 print('Saved:', file_name)
