@@ -413,6 +413,6 @@ if params['USE_RANDOM_WORD']:
         synthetic_df_all_r[c] = synthetic_df_all_r[c].map(lambda x: mapper_r[c][x] if x in mapper_r[c] else x)
 
 # Save synthetic tabular data
-file_name = os.path.join(SYN_DATA_SAVE_DIR, f'{DATA_NAME}_samples_True.csv')
+file_name = os.path.join(SYN_DATA_SAVE_DIR, f'{DATA_NAME}_samples.csv')
 synthetic_df_all_r.to_csv(file_name, index_label='synindex')
 print('Saved:', file_name)
