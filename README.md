@@ -1,4 +1,4 @@
-# Self-Reinforcing Controllable Synthesis of Rare Relational Data via Bayesian Calibration
+# Self-Reinforcing Controllable Synthesis of Rare Relational Data via Bayesian Calibration (ACL 2026 Findings paper)
 
 This is the official Github code repository for our ACL 2026 Findings paper (RDDG):
 
