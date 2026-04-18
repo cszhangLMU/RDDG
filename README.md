@@ -2,7 +2,7 @@
 
 This is the official Github code repository for our ACL 2026 Findings paper (RDDG):
 
-Chongsheng ZHANG, Hao Wang, Zelong Yu, Esteban Garces Arias, Julian Rodemann, Zhanshuo Zhang, Qilong Li, Gaojuan Fan, Krikamol Muandet, Christian Heumann. Self-Reinforcing Controllable Synthesis of Rare Relational Data via Bayesian Calibration. Findings of the Association for Computational Linguistics: ACL 2026 (ACL 2026 Findings), San Diego, California, USA, July 2-7, 2026. 
+Chongsheng Zhang, Hao Wang, Zelong Yu, Esteban Garces Arias, Julian Rodemann, Zhanshuo Zhang, Qilong Li, Gaojuan Fan, Krikamol Muandet, Christian Heumann. Self-Reinforcing Controllable Synthesis of Rare Relational Data via Bayesian Calibration. Findings of the Association for Computational Linguistics: ACL 2026 (ACL 2026 Findings), San Diego, California, USA, July 2-7, 2026. 
 
 https://github.com/cszhangLMU/RDDG
 
